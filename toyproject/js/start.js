@@ -6,6 +6,31 @@ startBtn.addEventListener('click', () => {
   begin();
 });
 
+function addAnswer(answerText, qIdx) {
+  var a = document.querySelector('.answerBox');
+  var answer = document.createElement('button');
+  answer.classList.add('answerList');
+  a.appendChild(answer);
+  answer.innerHTML = answerText;
+  answer.addEventListener('click', () => {
+    var children = document.querySelectorAll('.answerList');
+    for (let i = 0; i < children.length; i++) {
+      children[i].disabled = true;
+      children[i].style.display = 'none';
+    }
+    goNext(++qIdx);
+  });
+}
+
+function goNext(qIdx) {
+  var q = document.querySelector('.qBox');
+  q.innerHTML = qnaList[qIdx].q;
+
+  for (let i in qnaList[qIdx].a) {
+    addAnswer(qnaList[qIdx].a[i].answer, qIdx);
+  }
+}
+
 function begin() {
   main.style.webkitAnimation = 'fadeOut 1s';
   main.style.animation = 'fadeOut 1s';
@@ -16,5 +41,7 @@ function begin() {
       main.style.display = 'none';
       qna.style.display = 'block';
     }, 450);
+    let qIdx = 0;
+    goNext(qIdx);
   }, 450);
 }
