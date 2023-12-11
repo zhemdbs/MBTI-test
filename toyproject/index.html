@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="keywords" content="십이간지 연애유형">
+  <meta name="description" content="십이간지 연애유형">
+
+  <!-- sns share -->
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="십이간지 연애유형" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/share.png" />
+  <meta property="og:description" content="십이간지로 알아보는 연애유형" />
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="img/favicon.ico">
+
+  <title>십이간지 연애유형</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +27,10 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/qna.css">
   <link rel="stylesheet" href="./css/result.css">
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js" integrity="sha384-kYPsUbBPlktXsY6/oNHSUDZoTX6+YI51f63jCPEIPFP09ttByAdxd2mEjKuhdqn4" crossorigin="anonymous"></script>
+  <script>
+    Kakao.init('1fa32f36b105890b633bfc0fae4a5028'); // 사용하려는 앱의 JavaScript 키 입력
+  </script>
 </head>
 <body>
   <div class="container">
@@ -38,10 +56,11 @@
       <div class="result__name"></div>
       <div id="resultImg" class="img__wrap col-lg-6 col-md-8 col-sm-10 col-12"></div>
       <div class="result__desc"></div>
-      <button type="button" class="btn__share kakao">공유하기</button>
+      <button type="button" class="btn__share kakao" onclick="js:setShare()">공유하기</button>
     </section>
   </div>
   <script src="./js/data.js"></script>
   <script src="./js/start.js"></script>
+  <script src="./js/share.js"></script>
 </body>
 </html>
