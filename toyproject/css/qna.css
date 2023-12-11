@@ -25,7 +25,7 @@
 .answerList:first-child {
   margin-top: 0;
 }
-.answerList:hover, answerList:focus {
+.answerList:hover, .answerList:focus {
   background: #add8e6;
   color: #fff;
   cursor: pointer;

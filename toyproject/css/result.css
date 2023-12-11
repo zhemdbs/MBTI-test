@@ -1,0 +1,35 @@
+#result {
+  display: none;
+  margin: 50px auto;
+  padding: 50px 20px;
+  background: #fff;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#result .title {
+  font-size: 40px;
+}
+
+.result__name {
+  font-size: 29px;
+  color: #008b8b;
+}
+.result__desc{
+  font-size: 25px;
+}
+
+.btn__share {
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: #fee502;
+  color: #222;
+}
+.btn__share:hover {
+  border: 1px solid #fee502;
+  color: #222;
+  background: #fff;
+}
