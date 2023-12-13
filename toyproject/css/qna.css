@@ -31,14 +31,14 @@
   cursor: pointer;
 
 }
-.status {
+.progress {
   height: 20px;
   width: 80%;
   background-color: #fff;
   border-radius: 20px;
   margin: 10px auto 0;
 }
-.statusBar {
+.progressbar {
   height: 100%;
   border-radius: 20px;
   background: linear-gradient(to right,  #febbbb 0%,#fe9090 51%,#fe9090 51%,#ff5c5c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
